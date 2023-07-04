@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    display: flex;
+    height: 8vh;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-options img,
+.enemy-options img{
+    max-width: 100px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.player-options,
+.enemy-options{
+    width: 50%;
+    text-align: center;
+}
+
+.align{
+    display: flex;
+    height: 86vh;
+    background-color: #fbf3f3;
+    align-items: center;
+}
+
+.winner{
+    display: flex;
+    height: 6vh;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 480px){
+    .player-options img,
+    .enemy-options img{
+        max-width: 140px;
+}
+    
+}
