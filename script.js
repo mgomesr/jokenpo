@@ -1,39 +1,53 @@
 var clique = document.querySelectorAll('.player-options div > img');
 var playerOpt = '';
 var enemyOpt = '';
+var emp = 0;
+var jog = 0;
+var maq = 0;
 
 // Validação do vencedor do jogo
 function validarVitoria(){
 
-    let winner = document.querySelector('.winner');
+    let jogador = document.querySelector('.jogador');
+    let maquina = document.querySelector('.maquina');
+    let empate = document.querySelector('.empate');
 
     if (playerOpt == 'rock'){
         if (enemyOpt == 'rock'){
-            winner.innerHTML = 'Jogo Empatado!';
+            emp += 1;
+            empate.innerHTML = emp;
         } else if (enemyOpt == 'paper'){
-            winner.innerHTML = 'Vitória do Computador!';
+            maq += 1;
+            maquina.innerHTML = maq;
         } else if (enemyOpt == 'scissor'){
-            winner.innerHTML = 'Vitória do Jogador!';
+            jog += 1;
+            jogador.innerHTML = jog;
         }
     }
 
     else if (playerOpt == 'paper'){
         if (enemyOpt == 'rock'){
-            winner.innerHTML = 'Vitória do Jogador!';
+            jog += 1;
+            jogador.innerHTML = jog;
         } else if (enemyOpt == 'paper'){
-            winner.innerHTML = 'Jogo Empatado!';
+            emp += 1;
+            empate.innerHTML = emp;
         } else if (enemyOpt == 'scissor'){
-            winner.innerHTML = 'Vitória do Computador!';
+            maq += 1;
+            maquina.innerHTML = maq;
         }
     }
 
     else if (playerOpt == 'scissor'){
         if (enemyOpt == 'rock'){
-            winner.innerHTML = 'Vitória do Computador!';
+            maq += 1;
+            maquina.innerHTML = maq;
         } else if (enemyOpt == 'paper'){
-            winner.innerHTML = 'Vitória do Jogador!';
+            jog += 1;
+            jogador.innerHTML = jog;
         } else if (enemyOpt == 'scissor'){
-            winner.innerHTML = 'Jogo Empatado!';
+            emp += 1;
+            empate.innerHTML = emp;
         }
     }
 }
